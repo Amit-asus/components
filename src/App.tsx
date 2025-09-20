@@ -1,10 +1,10 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import KanbanBoard from "./components/Kanban/KanbanBoard";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <KanbanBoard />
     </div>
   );
 }
