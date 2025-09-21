@@ -1,10 +1,10 @@
 import "./App.css";
-import KanbanBoard from "./components/Kanban/KanbanBoard";
+import ExpensiveList from "./components/ExpensiveList/ExpensiveList";
 
 function App() {
   return (
     <div>
-      <KanbanBoard />
+      <ExpensiveList />
     </div>
   );
 }
