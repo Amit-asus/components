@@ -1,10 +1,10 @@
 import "./App.css";
-import ExpensiveList from "./components/ExpensiveList/ExpensiveList";
+import NumberStats from "./components/NumberStates/NumberStates";
 
 function App() {
   return (
     <div>
-      <ExpensiveList />
+      <NumberStats />
     </div>
   );
 }
