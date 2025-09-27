@@ -1,10 +1,10 @@
 import "./App.css";
-import NumberStats from "./components/NumberStates/NumberStates";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
 function App() {
   return (
     <div>
-      <NumberStats />
+      <ShoppingCart />
     </div>
   );
 }
