@@ -28,12 +28,12 @@ export default function TodoApp(): JSX.Element {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gray-50 rounded-lg">
+    <div className="max-w-2xl mx-auto p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
       <h2 className="text-xl font-bold mb-4">Todos</h2>
 
       <form
         onSubmit={handleAdd}
-        className="mb-3 grid grid-cols-1 md:grid-cols-[1fr,200px] gap-2 border border-red-600"
+        className="mb-3 grid grid-cols-1 md:grid-cols-[1fr,200px] gap-2 border border-react-blue/30 rounded-lg p-4"
       >
         <input
           value={text}
@@ -50,7 +50,7 @@ export default function TodoApp(): JSX.Element {
         <div className="md:col-span-2 flex gap-2 mt-2">
           <button
             type="submit"
-            className="px-3 py-2 rounded bg-blue-600 text-white"
+            className="px-3 py-2 rounded bg-gradient-primary text-white hover:opacity-90 transition-all"
           >
             Add
           </button>
@@ -67,28 +67,30 @@ export default function TodoApp(): JSX.Element {
         </div>
       </form>
 
-      <div className="flex items-center justify-between mb-3 border border-amber-600">
+      <div className="flex items-center justify-between mb-3 border border-vue-green/30 rounded-lg p-3">
         <div className="flex gap-2">
           <button
             onClick={() => setFilter("all")}
-            className={`px-2 py-1 rounded ${
-              filter === "all" ? "bg-blue-600 text-white" : "border"
+            className={`px-2 py-1 rounded transition-all ${
+              filter === "all" ? "bg-gradient-primary text-white" : "border border-gray-300 hover:border-react-blue"
             }`}
           >
             All
           </button>
           <button
             onClick={() => setFilter("active")}
-            className={`px-2 py-1 rounded ${
-              filter === "active" ? "bg-blue-600 text-white" : "border"
+            className={`px-2 py-1 rounded transition-all ${
+              filter === "active" ? "bg-gradient-secondary text-white" : "border border-gray-300 hover:border-vue-green"
             }`}
           >
             Active
           </button>
           <button
             onClick={() => setFilter("completed")}
-            className={`px-2 py-1 rounded ${
-              filter === "completed" ? "bg-blue-600 text-white" : "border"
+            className={`px-2 py-1 rounded transition-all ${
+              filter === "completed"
+                ? "bg-gradient-accent text-white"
+                : "border border-gray-300 hover:border-svelte-orange"
             }`}
           >
             Completed
@@ -98,28 +100,20 @@ export default function TodoApp(): JSX.Element {
         <div className="text-sm text-gray-500">{todos.length} items</div>
       </div>
 
-      <ul className="space-y-2 border border-yellow-400">
+      <ul className="space-y-2 border border-javascript-yellow/30 rounded-lg p-4">
         {filtered.map((t: Todo) => (
-          <TodoItem
-            key={t.id}
-            todo={t}
-            onToggle={toggle}
-            onDelete={remove}
-            onUpdate={update}
-          />
+          <TodoItem key={t.id} todo={t} onToggle={toggle} onDelete={remove} onUpdate={update} />
         ))}
       </ul>
 
-      <div className="mt-4 flex justify-between items-center border border-green-600">
+      <div className="mt-4 flex justify-between items-center border border-emerald/30 rounded-lg p-3">
         <button
           onClick={clearCompleted}
-          className="px-3 py-2 border rounded text-sm"
+          className="px-3 py-2 border border-gray-300 rounded text-sm hover:border-angular-red hover:bg-angular-red hover:text-white transition-all"
         >
           Clear completed
         </button>
-        <div className="text-xs text-gray-500">
-          Tip: click Edit to change title (blur to save)
-        </div>
+        <div className="text-xs text-gray-500">Tip: click Edit to change title (blur to save)</div>
       </div>
     </div>
   );

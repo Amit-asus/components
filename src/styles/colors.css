@@ -1,0 +1,174 @@
+/* Color System - Custom CSS Properties */
+:root {
+  /* Primary Brand Colors */
+  --color-angular-red: #dd0531;
+  --color-azure-blue: #007fff;
+  --color-javascript-yellow: #f9e64f;
+  --color-mandalorian-blue: #1857a4;
+  --color-node-green: #215732;
+  --color-react-blue: #61dafb;
+  --color-something-different: #832561;
+  --color-svelte-orange: #ff3d00;
+  --color-vue-green: #42b883;
+
+  /* Extended Color Palette */
+  --color-emerald: #10b981;
+  --color-purple: #8b5cf6;
+  --color-pink: #ec4899;
+  --color-indigo: #6366f1;
+  --color-teal: #14b8a6;
+  --color-amber: #f59e0b;
+  --color-rose: #f43f5e;
+  --color-cyan: #06b6d4;
+  --color-lime: #84cc16;
+  --color-violet: #7c3aed;
+
+  /* Neutral Colors */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  /* Semantic Colors */
+  --color-success: var(--color-emerald);
+  --color-warning: var(--color-amber);
+  --color-error: var(--color-angular-red);
+  --color-info: var(--color-azure-blue);
+
+  /* Background Colors */
+  --bg-primary: var(--color-slate-50);
+  --bg-secondary: var(--color-slate-100);
+  --bg-tertiary: var(--color-slate-200);
+  --bg-dark: var(--color-slate-800);
+  --bg-darker: var(--color-slate-900);
+
+  /* Text Colors */
+  --text-primary: var(--color-slate-900);
+  --text-secondary: var(--color-slate-600);
+  --text-tertiary: var(--color-slate-500);
+  --text-light: var(--color-slate-100);
+  --text-white: #ffffff;
+
+  /* Border Colors */
+  --border-light: var(--color-slate-200);
+  --border-medium: var(--color-slate-300);
+  --border-dark: var(--color-slate-400);
+
+  /* Shadow Colors */
+  --shadow-light: rgba(15, 23, 42, 0.1);
+  --shadow-medium: rgba(15, 23, 42, 0.15);
+  --shadow-dark: rgba(15, 23, 42, 0.25);
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, var(--color-react-blue), var(--color-azure-blue));
+  --gradient-secondary: linear-gradient(135deg, var(--color-vue-green), var(--color-emerald));
+  --gradient-accent: linear-gradient(135deg, var(--color-svelte-orange), var(--color-amber));
+  --gradient-purple: linear-gradient(135deg, var(--color-purple), var(--color-violet));
+  --gradient-warm: linear-gradient(135deg, var(--color-angular-red), var(--color-rose));
+  --gradient-cool: linear-gradient(135deg, var(--color-mandalorian-blue), var(--color-indigo));
+  --gradient-sunset: linear-gradient(135deg, var(--color-javascript-yellow), var(--color-svelte-orange));
+  --gradient-nature: linear-gradient(135deg, var(--color-node-green), var(--color-lime));
+}
+
+/* Dark Mode Color Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: var(--color-slate-900);
+    --bg-secondary: var(--color-slate-800);
+    --bg-tertiary: var(--color-slate-700);
+
+    --text-primary: var(--color-slate-100);
+    --text-secondary: var(--color-slate-300);
+    --text-tertiary: var(--color-slate-400);
+
+    --border-light: var(--color-slate-700);
+    --border-medium: var(--color-slate-600);
+    --border-dark: var(--color-slate-500);
+
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Utility Classes for Quick Color Access */
+.text-brand-primary {
+  color: var(--color-react-blue);
+}
+.text-brand-secondary {
+  color: var(--color-azure-blue);
+}
+.text-brand-accent {
+  color: var(--color-svelte-orange);
+}
+.text-brand-success {
+  color: var(--color-vue-green);
+}
+.text-brand-warning {
+  color: var(--color-javascript-yellow);
+}
+.text-brand-error {
+  color: var(--color-angular-red);
+}
+
+.bg-brand-primary {
+  background-color: var(--color-react-blue);
+}
+.bg-brand-secondary {
+  background-color: var(--color-azure-blue);
+}
+.bg-brand-accent {
+  background-color: var(--color-svelte-orange);
+}
+.bg-brand-success {
+  background-color: var(--color-vue-green);
+}
+.bg-brand-warning {
+  background-color: var(--color-javascript-yellow);
+}
+.bg-brand-error {
+  background-color: var(--color-angular-red);
+}
+
+.border-brand-primary {
+  border-color: var(--color-react-blue);
+}
+.border-brand-secondary {
+  border-color: var(--color-azure-blue);
+}
+.border-brand-accent {
+  border-color: var(--color-svelte-orange);
+}
+
+/* Gradient Utility Classes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+.bg-gradient-purple {
+  background: var(--gradient-purple);
+}
+.bg-gradient-warm {
+  background: var(--gradient-warm);
+}
+.bg-gradient-cool {
+  background: var(--gradient-cool);
+}
+.bg-gradient-sunset {
+  background: var(--gradient-sunset);
+}
+.bg-gradient-nature {
+  background: var(--gradient-nature);
+}
+

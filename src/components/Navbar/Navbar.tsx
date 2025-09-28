@@ -13,7 +13,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="bg-blue-600 text-white px-6 py-3 flex items-center justify-between">
+    <nav className="bg-gradient-primary text-white px-6 py-3 flex items-center justify-between shadow-brand">
       <div className="text-2xl font-bold">New App</div>
 
       {/* desktop menu */}
@@ -39,7 +39,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <ul className="absolute top-14 left-0 w-full bg-blue-700 flex flex-col items-center gap-4 py-4 md:hidden">
+        <ul className="absolute top-14 left-0 w-full bg-gradient-cool flex flex-col items-center gap-4 py-4 md:hidden">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a href={link.href} className="hover:underline">
